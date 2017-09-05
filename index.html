@@ -23,63 +23,68 @@
   </head>
 
   <body>
-
+<div class="tiles-header">
     <div class="container">
       <div class="header clearfix">
         <nav>
           <ul class="nav nav-pills pull-right">
-            <li role="presentation"><a href="#">Контакты</a></li>
+            <li role="presentation"><a href="#application_form">Контакты</a></li>
           </ul>
         </nav>
         <h3 class="text-muted">Конкурс &laquo;Лайки правят миром&raquo;</h3>
       </div>
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+          </ol>
 
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <img src="./empty_slide.svg" alt="Первый слайд">
+              <div class="carousel-caption">
+                Выясни чего ты стоишь!
+              </div>
+            </div>
+            <div class="item">
+              <img src="./empty_slide.svg" alt="Второй слайд">
+              <div class="carousel-caption">
+                Зови друзей, вместе веселее
+              </div>
+            </div>
+            <div class="item">
+              <img src="./empty_slide.svg" alt="Третий слайд">
+              <div class="carousel-caption">
+                Ценные призы победителям
+              </div>
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Назад</span>
+          </a>
+          <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Вперед</span>
+          </a>
+        </div>
+    </div>
+</div>
+    <div class="container" style="margin-top: 50px;">
       <div class="jumbotron">
         <h1>Роботы голосуют</h1>
         <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
         <p><a class="btn btn-lg btn-success" href="#" role="button">Хочу участвовать</a></p>
       </div>
+    </div>
 
-      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-        </ol>
 
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner" role="listbox">
-          <div class="item active">
-            <img src="./empty_slide.svg" alt="Первый слайд">
-            <div class="carousel-caption">
-              Выясни чего ты стоишь!
-            </div>
-          </div>
-          <div class="item">
-            <img src="./empty_slide.svg" alt="Второй слайд">
-            <div class="carousel-caption">
-              Зови друзей, вместе веселее
-            </div>
-          </div>
-          <div class="item">
-            <img src="./empty_slide.svg" alt="Третий слайд">
-            <div class="carousel-caption">
-              Ценные призы победителям
-            </div>
-          </div>
-        </div>
-
-        <!-- Controls -->
-        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-          <span class="sr-only">Назад</span>
-        </a>
-        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-          <span class="sr-only">Вперед</span>
-        </a>
-      </div>
+<div class="container">
 
       <div class="row marketing">
         <div class="col-lg-6">
@@ -105,6 +110,37 @@
         </div>
       </div>
 
+      <hr/>
+
+      <form class="form-horizontal"  style="margin-top: 30px; margin-bottom: 50px;" id="application_form">
+        <h3 style="margin-bottom: 25px; text-align: center;">Заявка на участие</h3>
+        <div class="row">
+          <div class="col-sm-offset-4 col-sm-6">
+            <p>Оставь заявку на участие и мы вовремя напомним тебе о приближающемся соревновании</p>
+          </div>
+        </div>
+        <div class="form-group" style="margin-top: 15px;">
+          <label for="inputEmail" class="col-sm-4 control-label">Имя участника</label>
+          <div class="col-sm-6">
+            <div class="input-group">
+              <span class="input-group-addon" id="basic-addon1">@</span>
+              <input type="text" class="form-control" id="name" name="name" placeholder="username" required>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputEmail" class="col-sm-4 control-label">Email</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" id="inputEmail" name="email" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-4 col-sm-8">
+            <button type="button" id="submit" name="submit" class="btn btn-primary">Отправить заявку</button>
+          </div>
+        </div>
+      </form>
+
       <footer class="footer">
         <p>&copy; 2017 Devman.org</p>
       </footer>
@@ -112,6 +148,12 @@
     </div> <!-- /container -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- adds reactive UI -->
+    <script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/riot/3.2/riot+compiler.min.js"></script>
+
+
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </body>
 </html>
